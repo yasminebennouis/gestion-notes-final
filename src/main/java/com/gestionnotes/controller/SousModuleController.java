@@ -21,7 +21,6 @@ public class SousModuleController {
         service.supprimer(id);
     }
 
-    // ✅ Surcharge pour accepter un objet SousModule directement
     public void supprimer(SousModule sm) {
         if (sm != null) {
             service.supprimer(sm.getId());

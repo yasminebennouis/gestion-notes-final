@@ -35,7 +35,7 @@ public class ModuleService {
         String sql = "INSERT INTO modules (nom, coefficient) VALUES (?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, module.getNom());
-            stmt.setDouble(2, module.getCoefficient()); // ✅ Correction ici
+            stmt.setDouble(2, module.getCoefficient());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Erreur lors de l'ajout du module", e);

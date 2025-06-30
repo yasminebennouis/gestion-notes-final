@@ -53,7 +53,7 @@ public class LoginView {
             Utilisateur user = utilisateurService.login(username, password);
             if (user != null && user.getRole().equalsIgnoreCase(role)) {
                 MainView mainView = new MainView(stage, user);
-                mainView.afficherMenuPrincipal();  // ✅ Lancement de la nouvelle scène
+                mainView.afficherMenuPrincipal();
             } else {
                 lblMessage.setText("❌ Informations invalides ou rôle incorrect.");
             }
